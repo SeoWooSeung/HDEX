@@ -1,0 +1,466 @@
+* {
+    outline: 1px solid tomato-;
+}
+
+.header {
+    height: 100px;
+}
+
+.header h1 {
+    font-size: 0;
+    margin: 0 30px 0 0;
+    width: 100px;
+    height: 30.67px;
+    vertical-align: middle;
+}
+
+.header .header_wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+}
+
+.header .gnb>ul {
+    line-height: 100px;
+    display: flex;
+    gap: 30px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.header .icon {
+    margin: 0 0 0 auto;
+    display: flex;
+    gap: 30px;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+/* -------------------------main--------------------------------- */
+.main .main_visual {
+    position: relative;
+}
+
+
+.main .main_img img {
+    width: 1920px;
+    height: 800px;
+}
+
+.main .btn {
+    position: absolute;
+    width: 220px;
+    height: 45px;
+    border: none;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    background: #fff;
+    color: #202124;
+}
+
+.main .btn:hover {
+    background: #ddd;
+    transition: 300ms;
+}
+
+.main .btn01 {
+    bottom: 100px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main .btn02 {
+    bottom: 165px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main_container {
+    padding: 50px 0;
+}
+
+.main_container .inner {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 세 개의 열을 만듭니다. 각 열의 너비는 1fr입니다. */
+    grid-gap: 30px;
+    /* 열과 행 사이의 간격을 지정합니다. */
+    text-align: center;
+}
+
+.main_container .inner figure {
+    position: relative;
+}
+
+.main_container .inner h2 {
+    position: absolute;
+    top: 187px;
+    left: 430px;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    font-weight: 600;
+    text-align: right;
+}
+
+.main_container .inner a {
+    display: inline-block;
+    padding: 8px 1px 8px 1px;
+    position: absolute;
+    top: 244px;
+    left: 430px;
+    transform: translate(-50%, -50%);
+    right: 22px;
+    border: 1px solid #202124;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* -----------------------mid_container------------------------- */
+
+.mid_container {
+    padding: 50px 0;
+}
+
+
+.mid_container .inner {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+}
+
+.mid_container .inner>* {
+    flex: 1;
+}
+
+.mid_container .inner figure {
+    margin: 0 0 100px 0;
+}
+
+.mid_container .desc {
+    text-align: center;
+}
+
+.mid_container .desc h2 {
+    margin: 0 0 28px 0;
+    font-size: 38px;
+    font-weight: 700;
+}
+
+.mid_container .desc p {
+    margin: 0 0 40px 0;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.mid_container .desc strong {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.mid_container .desc a {
+    font-size: 20px;
+    font-weight: 800;
+    padding: 10px 30px 10px 30px;
+    border: 1px solid #202124;
+    border-radius: 10px;
+    background: #111;
+    color: #fff;
+}
+
+/* ----------------------banner------------------------------ */
+
+.banner {
+    position: relative;
+    padding: 50px 0;
+}
+
+.banner .inner img {
+    width: 1920px;
+    height: 894px;
+}
+
+.banner h2 {
+    position: absolute;
+    top: 438px;
+    left: 150px;
+    transform: translate(0%, -50%);
+    color: #fff;
+    font-size: 38px;
+    font-weight: 700;
+}
+
+.banner a {
+    position: absolute;
+    top: 600px;
+    left: 150px;
+    transform: translate(0%, -50%);
+    border: none;
+    border-radius: 50px;
+    background: #fff;
+    padding: 20px 0 0 0;
+    width: 350px;
+    height: 60px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.banner a:hover {
+    background: #ddd;
+    transition: 300ms;
+}
+
+/* ----------------------main_contnet--------------------------- */
+
+.main_contnet {
+    position: relative;
+    max-width: 1200px;
+    padding: 50px 15px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.main_contnet .main_slide {
+    position: relative;
+    margin: 0 -15px;
+}
+
+.main_contnet .main_slide figure {
+    margin: 0 15px;
+}
+
+.main_contnet .main_slide figure img {
+    margin: 0 0 20px 0;
+}
+
+.main_contnet .main_slide .txt_box {
+    position: relative;
+    height: 100px;
+}
+
+.main_contnet .main_slide figure strong {
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 0 12px 0;
+}
+
+.main_contnet .main_slide figure p {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0 0 8px 0;
+}
+
+.main_contnet .main_slide figure .txt {
+    text-decoration: line-through;
+    /* margin: 0 0 8px 0; */
+}
+
+.main_contnet .main_slide figure span {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    color: #999;
+}
+
+.main_contnet .main_slide .txt_box ul {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.main_contnet .main_slide .txt_box ul li {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+}
+
+.main_contnet .main_slide .txt_box ul li a {
+    font-size: 0;
+}
+
+.main_contnet .main_slide .slick-dots {
+    position: absolute;
+    top: -20px;
+    right: 15px;
+    text-align: center;
+}
+
+.main_contnet .main_slide .slick-dots li {
+    display: inline-block;
+    margin: 0 0 0 4px;
+    line-height: 1;
+    height: 14px;
+}
+
+.main_contnet .main_slide .slick-dots button {
+    width: 14px;
+    height: 14px;
+    background: #ddd;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    color: transparent;
+}
+
+.main_contnet .main_slide .slick-dots li.slick-active button {
+    background: #202124;
+}
+
+.main_slide .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 999;
+    font-size: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #ddd;
+    border: none;
+    /* cursor: pointer; */
+}
+
+.main_slide .slick-prev {
+    left: -10px;
+}
+
+.main_slide .slick-prev::after {
+    content: "\e906";
+    font-family: xeicon;
+    font-size: 20px;
+    z-index: 1;
+}
+
+.main_slide .slick-next {
+    right: -10px;
+}
+
+.main_slide .slick-next::after {
+    content: "\e907";
+    font-family: xeicon;
+    font-size: 20px;
+    z-index: 1;
+}
+
+/* ------------------------sub_banner---------------------------------- */
+
+.sub_banner {
+    position: relative;
+    padding: 50px 0;
+}
+
+.sub_banner .inner img {
+    width: 1920px;
+    height: 894px;
+}
+
+.sub_banner h2 {
+    position: absolute;
+    top: 438px;
+    left: 150px;
+    transform: translate(0%, -50%);
+    color: #fff;
+    font-size: 38px;
+    font-weight: 700;
+}
+
+.sub_banner a {
+    position: absolute;
+    top: 600px;
+    left: 150px;
+    transform: translate(0%, -50%);
+    border: none;
+    border-radius: 50px;
+    background: #fff;
+    padding: 20px 0 0 0;
+    width: 350px;
+    height: 60px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.sub_banner a:hover {
+    background: #ddd;
+    transition: 300ms;
+}
+
+/* ---------------------last_banner--------------------------------- */
+.last_banner {
+    padding: 50px 0;
+}
+
+/* -----------------------footer---------------------------------- */
+
+.footer {
+    padding: 50px 0;
+    background: #000;
+    height: 321px;
+}
+
+.footer .inner {
+    justify-content: space-between;
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.footer .inner p {
+    color: #857E7E;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.footer .inner .lf_box span {
+    display: inline-block;
+    margin-top: 62px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #857E7E;
+}
+
+.footer .inner .tt {
+    color: #fff;
+}
+
+.footer .inner .mid_txt p {
+    font-size: 14px;
+    line-height: 22px;
+    color: #857E7E;
+    margin: 0 0 20px 0;
+}
+
+.footer .inner .mid_txt p span {
+    font-size: 20px;
+}
+
+
+.footer .inner .mid_txt span {
+    font-size: 14px;
+    color: #857E7E;
+    line-height: 22px;
+}
+
+.footer .inner .mid_txt strong {
+    margin: 50px 0 0 0;
+}
+
+.footer .inner .bt_box span {
+    display: inline-block;
+    font-size: 14px;
+    color: #857E7E;
+    margin: 0 0 8px 0;
+}
