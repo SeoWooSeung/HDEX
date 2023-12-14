@@ -464,3 +464,86 @@
     color: #857E7E;
     margin: 0 0 8px 0;
 }
+
+/* ----------------------right_banner------------------------------- */
+
+.right_banner {
+    position: fixed;
+    /*스크롤바 없앰*/
+    top: 0;
+    right: -99px;
+    width: 100px;
+    height: 100vh;
+    background: #f9f9f9;
+    transition: 0.5s;
+    border-left: 1px solid #ddd;
+}
+
+.right_banner.on {
+    right: 0;
+}
+
+.right_banner .btn {
+    position: absolute;
+    top: 50%;
+    left: -65px;
+    transform: translate(0, 0) rotate(90deg);
+    border: 1px solid #ddd;
+    border-top: none;
+    background: #f9f9f9;
+    height: 30px;
+    width: 100px;
+    font-size: 14px;
+}
+
+.right_banner .icon {
+    padding: 0 0 30px 0;
+    height: 70px;
+    overflow: hidden;
+    text-align: center;
+
+    color: #bbb;
+}
+
+.right_banner .icon i {
+    display: block;
+    font-size: 30px;
+    line-height: 50px;
+}
+
+.right_banner .icon span {
+    font-size: 14px;
+    line-height: 14px;
+    white-space: nowrap;
+    color: #857E7E;
+}
+
+.right_banner .inner {
+    padding: 50px 0 0 0;
+}
+
+.totop {
+    background: transparent;
+    border: none;
+    position: fixed;
+    bottom: 100px;
+    right: -100px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.totop i {
+    padding: 16px;
+    background: #000;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.totop.on {
+    right: 100px;
+    visibility: visible;
+    opacity: 1;
+}
