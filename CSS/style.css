@@ -141,9 +141,60 @@
     flex: 1;
 }
 
-.mid_container .inner figure {
+.mid_container .inner .txt_box {
+    position: relative;
+    overflow: hidden;
     margin: 0 0 100px 0;
 }
+
+.mid_container .inner .txt_box figure {
+    overflow: hidden;
+}
+
+.mid_container .inner .txt_box .txt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    transform: translate(0, 100%);
+
+    transition: 0.5s;
+}
+
+.mid_container .inner .txt_box .txt a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 150px;
+    height: 45px;
+    border: 1px solid #f9f9f9;
+    border-radius: 50px;
+}
+
+.mid_container .inner .txt_box .txt p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f9f9f9;
+    font-size: 18px;
+}
+
+.mid_container .inner .txt_box .txt p i {
+    display: inline-block;
+    font-size: 18px;
+}
+
+
+
+.mid_container .inner .txt_box:hover .txt {
+    transform: translate(0, 0);
+}
+
 
 .mid_container .desc {
     text-align: center;
@@ -236,10 +287,22 @@
 
 .main_contnet .main_slide figure {
     margin: 0 15px;
+    overflow: hidden;
+}
+
+.main_contnet .main_slide figure a {
+    overflow: hidden;
 }
 
 .main_contnet .main_slide figure img {
     margin: 0 0 20px 0;
+    height: 500px;
+    overflow: hidden;
+}
+
+.main_contnet .main_slide figure:hover img {
+    transform: scale(1.1);
+    transition: 0.3s;
 }
 
 .main_contnet .main_slide .txt_box {
@@ -450,7 +513,7 @@
 
 .footer .inner .mid_txt span {
     font-size: 14px;
-    color: #857E7E;
+    color: #fff;
     line-height: 22px;
 }
 
@@ -462,7 +525,7 @@
     display: inline-block;
     font-size: 14px;
     color: #857E7E;
-    margin: 0 0 8px 0;
+    margin: 0 0 12px 0;
 }
 
 /* ----------------------right_banner------------------------------- */
@@ -493,11 +556,11 @@
     background: #f9f9f9;
     height: 30px;
     width: 100px;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .right_banner .icon {
-    padding: 0 0 30px 0;
+    padding: 0 0 80px 0;
     height: 70px;
     overflow: hidden;
     text-align: center;
@@ -509,6 +572,11 @@
     display: block;
     font-size: 30px;
     line-height: 50px;
+}
+
+.right_banner .icon:hover i,
+.right_banner .icon:hover span {
+    color: #666;
 }
 
 .right_banner .icon span {
