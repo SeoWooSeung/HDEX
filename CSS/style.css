@@ -3,7 +3,20 @@
 }
 
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
     height: 100px;
+    border-bottom: 1px solid transparent;
+    transition: 0.5s;
+}
+
+.header.on {
+    background: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
 }
 
 .header h1 {
@@ -11,7 +24,6 @@
     margin: 0 30px 0 0;
     width: 100px;
     height: 30.67px;
-    vertical-align: middle;
 }
 
 .header .header_wrap {
@@ -20,18 +32,18 @@
     padding: 0 15px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .header .gnb>ul {
     line-height: 100px;
     display: flex;
     gap: 30px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
 }
 
 .header .icon {
-    margin: 0 0 0 auto;
     display: flex;
     gap: 30px;
     font-size: 24px;
@@ -43,10 +55,10 @@
     position: relative;
 }
 
-
 .main .main_img img {
-    width: 1920px;
-    height: 800px;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
 }
 
 .main .btn {
@@ -55,14 +67,14 @@
     height: 45px;
     border: none;
     border-radius: 50px;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     background: #fff;
-    color: #202124;
+    cursor: pointer;
 }
 
 .main .btn:hover {
-    background: #ddd;
+    background: #d9d9d9;
     transition: 300ms;
 }
 
@@ -78,8 +90,10 @@
     transform: translate(-50%, -50%);
 }
 
+/* ***************main_container*********************** */
+
 .main_container {
-    padding: 50px 0;
+    padding: 100px 0;
 }
 
 .main_container .inner {
@@ -88,46 +102,42 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /* 세 개의 열을 만듭니다. 각 열의 너비는 1fr입니다. */
     grid-gap: 30px;
-    /* 열과 행 사이의 간격을 지정합니다. */
-    text-align: center;
+    /* text-align: center; */
 }
 
 .main_container .inner figure {
     position: relative;
 }
 
-.main_container .inner h2 {
+.main_container .inner .con {
     position: absolute;
-    top: 187px;
-    left: 430px;
-    transform: translate(-50%, -50%);
-    font-size: 50px;
-    font-weight: 600;
+    top: 40%;
+    right: 10%;
+    /* transform: translate(-50%, -50%); */
     text-align: right;
 }
 
-.main_container .inner a {
-    display: inline-block;
-    padding: 8px 1px 8px 1px;
-    position: absolute;
-    top: 244px;
-    left: 430px;
-    transform: translate(-50%, -50%);
-    right: 22px;
-    border: 1px solid #202124;
-    border-radius: 50px;
-    font-size: 16px;
-    font-weight: 500;
+.main_container .inner .con span {
+    display: block;
+    margin: 0 0 24px 0;
+    font-size: 48px;
+    font-weight: 600;
+    letter-spacing: -1px;
 }
 
-/* -----------------------mid_container------------------------- */
+.main_container .inner .con a {
+    padding: 4px 24px;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 50px;
+}
+
+/* ********************mid_container********************* */
 
 .mid_container {
-    padding: 50px 0;
+    padding: 100px 0;
 }
-
 
 .mid_container .inner {
     max-width: 1200px;
@@ -148,7 +158,20 @@
 }
 
 .mid_container .inner .txt_box figure {
+    position: relative;
     overflow: hidden;
+}
+
+.mid_container .inner .txt_box figure span {
+    position: absolute;
+    display: block;
+    bottom: 20px;
+    left: 20px;
+    /* transform: translate(-50%, -50%); */
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: left;
 }
 
 .mid_container .inner .txt_box .txt {
@@ -190,11 +213,9 @@
 }
 
 
-
 .mid_container .inner .txt_box:hover .txt {
     transform: translate(0, 0);
 }
-
 
 .mid_container .desc {
     text-align: center;
@@ -207,7 +228,7 @@
 }
 
 .mid_container .desc p {
-    margin: 0 0 40px 0;
+    margin: 0 0 60px 0;
     font-size: 20px;
     font-weight: 400;
 }
@@ -218,13 +239,10 @@
 }
 
 .mid_container .desc a {
-    font-size: 20px;
-    font-weight: 800;
-    padding: 10px 30px 10px 30px;
-    border: 1px solid #202124;
-    border-radius: 10px;
-    background: #111;
+    background: #000;
+    padding: 12px 48px;
     color: #fff;
+    border-radius: 10px;
 }
 
 /* ----------------------banner------------------------------ */
@@ -236,38 +254,33 @@
 
 .banner .inner img {
     width: 1920px;
-    height: 894px;
+    height: 100vh;
 }
 
-.banner h2 {
+.banner .desc {
     position: absolute;
-    top: 438px;
-    left: 150px;
-    transform: translate(0%, -50%);
+    top: 50%;
+    left: 400px;
+    transform: translate(-50%, -50%);
     color: #fff;
-    font-size: 38px;
-    font-weight: 700;
 }
 
-.banner a {
-    position: absolute;
-    top: 600px;
-    left: 150px;
-    transform: translate(0%, -50%);
+.banner .desc span {
+    display: block;
+    font-size: 48px;
+    margin: 0 0 80px 0;
+    letter-spacing: -1.5px;
+}
+
+.banner .desc button {
+    width: 220px;
+    height: 45px;
     border: none;
     border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
     background: #fff;
-    padding: 20px 0 0 0;
-    width: 350px;
-    height: 60px;
-    text-align: center;
-    font-size: 20px;
-    font-weight: 800;
-}
-
-.banner a:hover {
-    background: #ddd;
-    transition: 300ms;
+    cursor: pointer;
 }
 
 /* ----------------------main_contnet--------------------------- */
@@ -275,9 +288,17 @@
 .main_contnet {
     position: relative;
     max-width: 1200px;
-    padding: 50px 15px;
+    padding: 100px 15px;
     margin: 0 auto;
     width: 100%;
+}
+
+.main_contnet h2 {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0 0 56px 0;
+    letter-spacing: -1px;
 }
 
 .main_contnet .main_slide {
@@ -311,14 +332,14 @@
 
 .main_contnet .main_slide figure strong {
     display: block;
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 18px;
+    font-weight: 500;
     margin: 0 0 12px 0;
 }
 
 .main_contnet .main_slide figure p {
-    font-size: 14px;
-    font-weight: 400;
+    font-size: 16px;
+    font-weight: 500;
     margin: 0 0 8px 0;
 }
 
@@ -331,7 +352,7 @@
     display: block;
     font-size: 14px;
     font-weight: 400;
-    color: #999;
+    color: #d9d9d9;
 }
 
 .main_contnet .main_slide .txt_box ul {
@@ -355,7 +376,7 @@
 .main_contnet .main_slide .slick-dots {
     position: absolute;
     top: -20px;
-    right: 15px;
+    right: 16px;
     text-align: center;
 }
 
@@ -380,22 +401,29 @@
     background: #202124;
 }
 
+/* **************.main_slide *************** */
+
 .main_slide .slick-arrow {
     position: absolute;
-    top: 50%;
+    top: 40%;
     transform: translate(0, -50%);
     z-index: 999;
     font-size: 0;
-    width: 30px;
-    height: 30px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     background: #ddd;
     border: none;
-    /* cursor: pointer; */
+    cursor: pointer;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
 }
 
 .main_slide .slick-prev {
-    left: -10px;
+    left: -16px;
+}
+
+.main_slide .slick-next {
+    right: -16px;
 }
 
 .main_slide .slick-prev::after {
@@ -405,9 +433,6 @@
     z-index: 1;
 }
 
-.main_slide .slick-next {
-    right: -10px;
-}
 
 .main_slide .slick-next::after {
     content: "\e907";
@@ -420,48 +445,52 @@
 
 .sub_banner {
     position: relative;
-    padding: 50px 0;
+    padding: 100px 0;
 }
 
 .sub_banner .inner img {
-    width: 1920px;
-    height: 894px;
+    width: 100%;
+    height: 100vh;
 }
 
-.sub_banner h2 {
+.sub_banner .desc {
     position: absolute;
-    top: 438px;
-    left: 150px;
-    transform: translate(0%, -50%);
+    top: 50%;
+    left: 400px;
+    transform: translate(-50%, -50%);
     color: #fff;
-    font-size: 38px;
-    font-weight: 700;
 }
 
-.sub_banner a {
-    position: absolute;
-    top: 600px;
-    left: 150px;
-    transform: translate(0%, -50%);
+
+.sub_banner .desc strong {
+    display: block;
+    font-size: 48px;
+    margin: 0 0 24px 0;
+}
+
+.sub_banner .desc span {
+    display: block;
+    font-size: 48px;
+    margin: 0 0 48px 0;
+    letter-spacing: -1.5px;
+}
+
+
+.sub_banner .desc button {
+    width: 220px;
+    height: 45px;
     border: none;
     border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
     background: #fff;
-    padding: 20px 0 0 0;
-    width: 350px;
-    height: 60px;
-    text-align: center;
-    font-size: 20px;
-    font-weight: 800;
-}
-
-.sub_banner a:hover {
-    background: #ddd;
-    transition: 300ms;
+    cursor: pointer;
 }
 
 /* ---------------------last_banner--------------------------------- */
 .last_banner {
-    padding: 50px 0;
+    padding: 0 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.7);
 }
 
 /* -----------------------footer---------------------------------- */
@@ -469,7 +498,6 @@
 .footer {
     padding: 50px 0;
     background: #000;
-    height: 321px;
 }
 
 .footer .inner {
@@ -498,33 +526,38 @@
     color: #fff;
 }
 
-.footer .inner .mid_txt p {
-    font-size: 14px;
-    line-height: 22px;
-    color: #857E7E;
-    margin: 0 0 20px 0;
-}
-
-.footer .inner .mid_txt p span {
-    font-size: 20px;
-}
-
-
-.footer .inner .mid_txt span {
+.footer .inner .mid_txt strong {
+    display: block;
     font-size: 14px;
     color: #fff;
-    line-height: 22px;
+    margin: 0 0 8px 0;
 }
 
-.footer .inner .mid_txt strong {
-    margin: 50px 0 0 0;
+.footer .inner .mid_txt span {
+    display: block;
+    font-size: 14px;
+    color: #fff;
+    margin: 0 0 8px 0;
+}
+
+.footer .inner .mid_txt tt {
+    font-size: 24px;
+
+}
+
+.footer .inner .bt_box {
+    margin: 0 0 60px 0;
 }
 
 .footer .inner .bt_box span {
-    display: inline-block;
+    display: block;
     font-size: 14px;
-    color: #857E7E;
-    margin: 0 0 12px 0;
+    color: #fff;
+}
+
+.footer .inner .bt_box .icon {
+    display: flex;
+    gap: 10px;
 }
 
 /* ----------------------right_banner------------------------------- */
@@ -539,6 +572,7 @@
     background: #f9f9f9;
     transition: 0.5s;
     border-left: 1px solid #ddd;
+    z-index: 1000;
 }
 
 .right_banner.on {
@@ -556,10 +590,12 @@
     height: 30px;
     width: 100px;
     font-size: 12px;
+    cursor: pointer;
 }
 
 .right_banner .icon {
-    padding: 0 0 80px 0;
+    padding: 0 15px;
+    margin: 0 0 8px 0;
     height: 70px;
     overflow: hidden;
     text-align: center;
@@ -570,7 +606,7 @@
 .right_banner .icon i {
     display: block;
     font-size: 30px;
-    line-height: 50px;
+    line-height: 40px;
 }
 
 .right_banner .icon:hover i,
@@ -602,7 +638,7 @@
 
 .totop i {
     padding: 16px;
-    background: #000;
+    background: #666;
     color: #fff;
     font-size: 28px;
     cursor: pointer;
