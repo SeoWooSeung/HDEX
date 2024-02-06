@@ -21,19 +21,26 @@ $(function () {
     const sct = $(window).scrollTop();
     if (sct > 800) {
       $(".totop").addClass("on");
-      $(".header").addClass("on");
+      $(".header").addClass("");
     } else {
       $(".totop").removeClass("on");
-      $(".header").removeClass("on");
+      $(".header").removeClass("");
     }
   });
 
   $(window).on("scroll", function () {
     const sct = $(window).scrollTop();
     if (sct > 0) {
-      $(".header").addClass("on");
+      $(".header").addClass("active");
     } else {
-      $(".header").removeClass("on");
+      $(".header").removeClass("active");
     }
+  });
+
+  $(".mbt").on("click", function () {
+    $(".gnb").toggleClass("on");
+    $(".h1").toggleClass("on");
+    $(".header").toggleClass("on");
+    $(".icon").toggleClass("on");
   });
 });
